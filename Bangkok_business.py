@@ -13,7 +13,8 @@ import time
 import os
 import csv
 import re
-import os
+import json
+import logging
 
 # 獲取 Discord Webhook URL
 WEBHOOK_URL = os.getenv("DISCORD_WEBHOOK_URL")
