@@ -13,8 +13,7 @@ import time
 import os
 import csv
 import re
-import json
-import logging
+
 
 # 獲取 Discord Webhook URL
 WEBHOOK_URL = "https://discord.com/api/webhooks/1301474261176942603/RJrSYYyNLbETUQ5KN5OWmhKagk1ahY3bCg_dxKoT5tpe-f55jDfp1BznAxiN4Dx5rQ8u"
