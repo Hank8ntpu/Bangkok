@@ -15,8 +15,6 @@ jobs:
         script:
           - 'code/Bangkok/Bangkok.py'
           - 'code/Bangkok/Bangkok_business.py'
-          - 'code/France/France.py'
-          - 'code/France/France_business.py'
 
     steps:
     - name: Checkout repository
