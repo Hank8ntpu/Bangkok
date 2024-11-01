@@ -34,7 +34,7 @@ jobs:
 
     - name: Download ChromeDriver
       run: |
-        choco install chromedriver --version=114.0.5735.90 -y  # 使用 Chocolatey 安裝 ChromeDriver
+        choco install chromedriver --version=130.0.6723.70 -y  # 使用 Chocolatey 安裝 ChromeDriver
         # 確保將 <desired_version> 替換為所需的 ChromeDriver 版本      
 
     - name: Run script
