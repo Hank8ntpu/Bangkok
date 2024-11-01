@@ -45,12 +45,7 @@ jobs:
     - name: Run script
       run: |
         python ${{ matrix.script }}  # 動態運行 Python 腳本
-        
-    - name: Run script
-      env:
-        DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
-      run: |
-        python your_script.py
+        y
 
     - name: Upload CSV as artifacts
       uses: actions/upload-artifact@v3  # 使用最新版本
