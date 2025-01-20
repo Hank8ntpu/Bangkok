@@ -139,11 +139,18 @@ def scrape_flights(start_date_str, end_date_str):
         
         time.sleep(5)
 
-        # 獲取所有航班連結
-        flight_links = WebDriverWait(driver, 20).until(
+        try:
+            # 嘗試獲取所有航班連結
+            flight_links = WebDriverWait(driver, 20).until(
             EC.presence_of_all_elements_located((By.CSS_SELECTOR, "li.pIav2d"))
-        )
-        print(f"找到 {len(flight_links)} 個航班")
+            )
+            print(f"找到 {len(flight_links)} 個航班")
+        except Exception as e:
+            # 若找不到任何航班連結，記錄日誌並繼續
+            print(f"日期 {current_date.strftime('%Y-%m-%d')} 無任何直達航班，錯誤訊息: {e}")
+            logging.warning(f"日期 {current_date.strftime('%Y-%m-%d')} 無任何直達航班")
+            current_date += delta  # 移動到下一個日期
+            continue
                        
         today_date = datetime.now().strftime("%m%d")
         
